@@ -3,7 +3,6 @@ pipeline {
     docker { 
       image 'registry.hub.docker.com/zumasys/jbase-dev:centos-7' 
       args ' -u 0:0 --entrypoint=/bin/profile'
-      customWorkspace '/builds/jbase/core'					
     }
 	}
   stages {
