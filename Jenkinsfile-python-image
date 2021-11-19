@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker {image "3.10.0-alpine3.13"}
+    docker { image "python:3.9.9-bullseye" }
   }
   stages {
     stage("Test"){
