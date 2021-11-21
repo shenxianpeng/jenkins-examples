@@ -10,7 +10,7 @@ pipeline {
         script {
           def img = docker.image("ubuntu")
           img.inside(){
-            sh """/bin/bash
+            sh """#!/bin/bash
             cat /etc/os-release
             whoami
             hostname
