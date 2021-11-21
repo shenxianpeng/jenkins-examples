@@ -12,8 +12,8 @@ pipeline {
           img.inside(){
             sh """#!/bin/bash
             cat /etc/os-release
-            whoami
             hostname
+            ls /
             """
           }
         }
