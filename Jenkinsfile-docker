@@ -10,9 +10,11 @@ pipeline {
         script {
           def img = docker.image("ubuntu")
           img.inside(){
-            sh 'cat /etc/os-release'
-            sh 'whoami'
-            sh 'hostname'
+            sh """bash
+            cat /etc/os-release
+            whoami
+            hostname
+            """
           }
         }
       }
