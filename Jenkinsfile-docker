@@ -7,9 +7,11 @@ pipeline {
   stages {
     stage("Test"){
       steps {
-        def img = docker.image("ubuntu")
-        img.inside(){
-          sh "cat /etc/os-release"
+        script {
+          def img = docker.image("ubuntu")
+          img.inside(){
+            sh "cat /etc/os-release"
+          }
         }
       }
     }
