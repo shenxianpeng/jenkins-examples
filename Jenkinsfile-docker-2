@@ -5,11 +5,11 @@ pipeline {
   stages {
     stage("Test"){
       steps {
-         sh """#!/bin/sh
-          cat /etc/os-release
-          hostname
-          ls /
-          """
+        sh """
+        cat /etc/os-release
+        ls /
+        hostname
+        """
       }
     }
   }
